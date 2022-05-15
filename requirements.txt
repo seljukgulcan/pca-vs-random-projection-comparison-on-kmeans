@@ -1,0 +1,7 @@
+numpy
+tqdm
+jupyter
+scikit-image
+scikit-learn
+matplotlib
+seaborn
