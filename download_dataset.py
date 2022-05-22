@@ -1,6 +1,7 @@
 import urllib
 import zipfile
 import os
+import sys
 from pathlib import Path
 
 def download_coco_dataset(dataset_name, *, force_download=False):
