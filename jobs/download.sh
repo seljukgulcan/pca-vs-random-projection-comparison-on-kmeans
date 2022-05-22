@@ -28,6 +28,7 @@ fi
 
 # Job starts here
 
+cd ${REPOPATH}
 python download_dataset.py ${DATANAME}
 
 # Job ends here

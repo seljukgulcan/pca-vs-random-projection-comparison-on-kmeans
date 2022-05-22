@@ -1,4 +1,4 @@
-import urllib
+import urllib.request
 import zipfile
 import os
 import sys
@@ -15,7 +15,7 @@ def download_coco_dataset(dataset_name, *, force_download=False):
     if not download:
         return
     
-    urllib.request.urlretrieve(URL, zip_name)
+    urllib.request.urlretrieve(url, zip_name)
     
     if not os.path.isdir(dataset_name):
         os.mkdir(dataset_name)
