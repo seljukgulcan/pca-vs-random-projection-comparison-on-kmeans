@@ -30,7 +30,7 @@ fi
 # Job starts here
 
 cd ${REPOPATH}
-python resize.py ${DATANAME} ${DIMENSION}
+python resize_dataset.py ${DATANAME} ${DIMENSION}
 
 # Job ends here
 
