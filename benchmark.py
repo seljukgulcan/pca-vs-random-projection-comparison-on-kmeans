@@ -32,7 +32,7 @@ if __name__ == '__main__':
     folder_path = f'{dataset}_{width}'
     filename_lst = os.listdir(folder_path)
 
-    if len(sys.argv >= 6):
+    if len(sys.argv) >= 6:
         n_img = int(sys.argv[5])
     else:
         n_img = len(filename_lst)
