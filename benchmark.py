@@ -31,12 +31,16 @@ if __name__ == '__main__':
     height = width
     folder_path = f'{dataset}_{width}'
     filename_lst = os.listdir(folder_path)
-    n_img = len(filename_lst)
-    result_filepath = Path('result') / f'{dataset}_{width}_{d_pca}_{k}.csv'
+
+    if len(sys.argv >= 6):
+        n_img = int(sys.argv[5])
+    else:
+        n_img = len(filename_lst)
+    result_filepath = Path('result') / f'{dataset}_{n_img}_{width}_{d_pca}_{k}.csv'
 
     # Read the images
     X = np.empty((n_img, width * height * 3), dtype=np.uint8)
-    for i, filename in enumerate(filename_lst):
+    for i, filename in enumerate(filename_lst[:n_img]):
         input_filepath = Path(folder_path) / filename
         im = skimage.io.imread(input_filepath)
 
